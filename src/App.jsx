@@ -2,6 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
+import CustomDessertForm from './pertemuan-3/CustomDessertForm'
 import './App.css'
 
 function App() {
@@ -27,7 +28,12 @@ function App() {
         >
           Count is {count}
         </button>
+
+        <div className="mt-10 w-full max-w-md mx-auto">
+          <CustomDessertForm />
+        </div>
       </section>
+      <CustomDessertForm />
 
       <div className="ticks"></div>
 
