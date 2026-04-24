@@ -5,7 +5,7 @@
     "category": "Coffee",
     "price": 20000,
     "rating": 4.7,
-    "image": "https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?w=400&h=300&fit=crop&q=80",
+    "image": "images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?w=400&h=300&fit=crop&q=80",
     "externalLink": "https://www.starbucks.com/menu/product/407/hot",
     "details": { "calories": 5, "size": "Small", "isHot": true },
     "shop": { "name": "Kopi Kita", "location": "Bandung", "openHour": "08:00 - 22:00" },

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import data from "./cafeData.json";
 
-export default function AdminPage({ goGuest }) { // Pastikan goGuest diterima sebagai props
+export default function AdminPage({ goGuest }) { 
   const [form, setForm] = useState({
     search: "",
     category: "",
