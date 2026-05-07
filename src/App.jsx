@@ -1,35 +1,79 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Sidebar from "./layouts/Sidebar";
+import Header from "./layouts/Header";
+import Dashboard from "./pages/Dashboard";
+import Orders from "./pages/Orders";
+import Customers from "./pages/Customers";
+import NotFound from "./pages/NotFound";
+import ErrorPage from "./pages/ErrorPage";
+
+import { Routes, Route } from "react-router-dom";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div id="app-container" className="bg-gray-100 min-h-screen flex">
+      {/* Layout Wrapper */}
+      <div id="layout-wrapper" className="flex flex-row flex-1">
+        {/* Sidebar */}
+        <Sidebar />
+
+        {/* Main Content */}
+        <div id="main-content" className="flex-1 p-4">
+          <Header />
+
+          {/*Tambahan routing */}
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/orders" element={<Orders />} />
+            <Route path="/customers" element={<Customers />} />
+            <Route path="*" element={<NotFound />} />
+            <Route
+              path="/error400"
+              element={
+                <ErrorPage
+                  code="400"
+                  description="Bad Request"
+                  image="https://cdn-icons-png.flaticon.com/512/6134/6134065.png"
+                />
+              }
+            />
+
+            <Route
+              path="/error401"
+              element={
+                <ErrorPage
+                  code="401"
+                  description="Unauthorized"
+                  image="https://cdn-icons-png.flaticon.com/512/564/564619.png"
+                />
+              }
+            />
+
+            <Route
+              path="/error403"
+              element={
+                <ErrorPage
+                  code="403"
+                  description="Forbidden"
+                  image="https://cdn-icons-png.flaticon.com/512/1828/1828843.png"
+                />
+              }
+            />
+
+            <Route
+              path="*"
+              element={
+                <ErrorPage
+                  code="404"
+                  description="Page Not Found"
+                  image="https://cdn-icons-png.flaticon.com/512/2748/2748558.png"
+                />
+              }
+            />
+          </Routes>
+        </div>
       </div>
-      <h1>Hirono Apps</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;

@@ -1,7 +1,10 @@
-// import { createRoot } from "react-dom/client";
-// import "./assets/tailwind.css";
-// import Sidebar from "./layouts/Sidebar";
+import { createRoot } from "react-dom/client";
+import App from "./App";
+import { BrowserRouter } from "react-router-dom";
+import "./assets/tailwind.css";
 
-// createRoot(document.getElementById("root")).render(
-//   <Sidebar />
-// );
+createRoot(document.getElementById("root")).render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+);
