@@ -1,5 +1,6 @@
 import { useState } from "react";
 import PageHeader from "../components/PageHeader";
+import data from "../DummyData.json";
 
 export default function Orders() {
   const [showModal, setShowModal] = useState(false);
