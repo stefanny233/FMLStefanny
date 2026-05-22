@@ -56,6 +56,12 @@ export default function Sidebar() {
             </NavLink>
           </li>
           <li>
+            <NavLink to="/products" className={menuClass}>
+              <MdDashboard className="mr-4 text-xl" />
+              Products
+            </NavLink>
+          </li>
+          <li>
             <NavLink to="/service" className={menuClass}>
               <AiFillCustomerService className="mr-4 text-xl" />
               Service
