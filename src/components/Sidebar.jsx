@@ -1,6 +1,6 @@
 import { BsPeople } from "react-icons/bs";
 import { AiFillCustomerService } from "react-icons/ai";
-import { FaMoneyBillAlt } from "react-icons/fa";
+import { FaMoneyBillAlt, FaBox } from "react-icons/fa"; // Ditambahkan FaBox untuk ikon Components
 import { MdDashboard } from "react-icons/md";
 import { NavLink } from "react-router-dom";
 
@@ -61,6 +61,15 @@ export default function Sidebar() {
               Products
             </NavLink>
           </li>
+          
+          {/* MENU BARU: COMPONENTS SEPERTI PROJEK ALIYA */}
+          <li>
+            <NavLink to="/components" className={menuClass}>
+              <FaBox className="mr-4 text-xl" />
+              Components
+            </NavLink>
+          </li>
+          
           <li>
             <NavLink to="/service" className={menuClass}>
               <AiFillCustomerService className="mr-4 text-xl" />

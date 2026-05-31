@@ -16,6 +16,8 @@ const AuthLayout = React.lazy(() => import("./layouts/AuthLayout"))
 const Products = React.lazy(() => import("./pages/Products"))
 const ProductDetail = React.lazy(() => import("./pages/ProductDetail"))
 
+const Components = React.lazy(() => import("./pertemuan-10/pages/Components"))
+
 export default function App() {
     return (
       <Suspense fallback={<Loading />}>
@@ -24,6 +26,8 @@ export default function App() {
         <Route path="/" element={<Dashboard />} />
         <Route path="/orders" element={<Orders />} />
         <Route path="/customers" element={<Customers />} />
+
+        <Route path="/components" element={<Components />} />
 
         <Route path="/products" element={<Products />} />
         <Route path="/products/:id" element={<ProductDetail />} /> 
