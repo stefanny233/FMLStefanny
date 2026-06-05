@@ -17,7 +17,7 @@ const Products = React.lazy(() => import("./pages/Products"))
 const ProductDetail = React.lazy(() => import("./pages/ProductDetail"))
 
 const Components = React.lazy(() => import("./pertemuan-10/pages/Components"))
-
+const FiturXyz = React.lazy(() => import("./pages/FiturXyz"));
 export default function App() {
     return (
       <Suspense fallback={<Loading />}>
@@ -31,8 +31,9 @@ export default function App() {
 
         <Route path="/products" element={<Products />} />
         <Route path="/products/:id" element={<ProductDetail />} /> 
+        <Route path="/FiturXyz" element={<FiturXyz />} />
 
-        <Route path="*" element={<NotFound />} />
+        <Route path="*" element={<NotFound />} /> 
         <Route
           path="/error400"
           element={

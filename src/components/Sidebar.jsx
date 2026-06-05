@@ -69,6 +69,12 @@ export default function Sidebar() {
               Components
             </NavLink>
           </li>
+          <li>
+            <NavLink to="/FiturXyz" className={menuClass}>
+              <FaBox className="mr-4 text-xl" />
+              Fitur XYZ
+            </NavLink>
+          </li>
           
           <li>
             <NavLink to="/service" className={menuClass}>
