@@ -45,7 +45,7 @@ export default function Header() {
         {/* Profile Section */}
         <div id="profile-container" className="flex items-center gap-2 ml-4">
           <span id="profile-text" className="text-sm text-gray-600">
-            Hello, <b>Stefanny Huang</b>
+            Hay, <b>Stefanny Huang</b>
           </span>
 
           <img
