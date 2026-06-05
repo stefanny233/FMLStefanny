@@ -34,10 +34,6 @@ export default function Header() {
           </span>
         </div>
 
-        <div id="chart-icon" className="text-xl cursor-pointer">
-          <FcAreaChart />
-        </div>
-
         <div id="settings-icon" className="text-xl cursor-pointer">
           <SlSettings />
         </div>
