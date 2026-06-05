@@ -18,12 +18,6 @@ export default function Header() {
                text-sm focus:outline-none focus:ring-2 focus:ring-green-400 
                focus:bg-white transition"
         />
-
-        <FaSearch
-          id="search-icon"
-          className="absolute right-3 top-1/2 transform -translate-y-1/2 
-               text-gray-400 text-sm pointer-events-none"
-        />
       </div>
 
       {/* Icon & Profile Section */}
