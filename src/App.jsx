@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import React, { Suspense } from "react";
 import Loading from "./components/Loading";
+// import Note from "./pages/Note";
 
 const Dashboard = React.lazy(() => import("./pages/Dashboard"))
 const Orders = React.lazy(() => import("./pages/Orders"))
@@ -18,6 +19,9 @@ const ProductDetail = React.lazy(() => import("./pages/ProductDetail"))
 
 const Components = React.lazy(() => import("./pertemuan-10/pages/Components"))
 const FiturXyz = React.lazy(() => import("./pages/FiturXyz"));
+const Note = React.lazy(() => import("./pages/Note"));
+// const Note = React.lazy(() => import("./pages/Note"));
+
 export default function App() {
     return (
       <Suspense fallback={<Loading />}>
@@ -32,6 +36,7 @@ export default function App() {
         <Route path="/products" element={<Products />} />
         <Route path="/products/:id" element={<ProductDetail />} /> 
         <Route path="/FiturXyz" element={<FiturXyz />} />
+        <Route path="/notes" element={<Note />} />
 
         <Route path="*" element={<NotFound />} /> 
         <Route

@@ -61,7 +61,7 @@ export default function Sidebar() {
               Products
             </NavLink>
           </li>
-          
+
           {/* MENU BARU: COMPONENTS SEPERTI PROJEK ALIYA */}
           <li>
             <NavLink to="/components" className={menuClass}>
@@ -75,7 +75,14 @@ export default function Sidebar() {
               Fitur XYZ
             </NavLink>
           </li>
-          
+
+          <li>
+            <NavLink to="/notes" className={menuClass}>
+              <FaBox className="mr-4 text-xl" />
+              Note
+            </NavLink>
+          </li>
+
           <li>
             <NavLink to="/service" className={menuClass}>
               <AiFillCustomerService className="mr-4 text-xl" />
